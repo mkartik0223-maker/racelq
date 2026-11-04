@@ -1,1 +1,266 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b12">
+<title>RacelQ - Keep Pushing the Limits</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080b12;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  height: 75px;
+  padding: 0 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #252b37;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #ff3045;
+}
+
+.menu {
+  color: #ff3045;
+  font-size: 25px;
+}
+
+.hero {
+  padding: 65px 22px 55px;
+  background: linear-gradient(135deg, #171d2a, #080b12);
+}
+
+.tag {
+  color: #ff4655;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 43px;
+  line-height: 1.12;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #ff3045;
+}
+
+.hero p {
+  color: #aab3c2;
+  line-height: 1.7;
+  font-size: 15px;
+  max-width: 420px;
+}
+
+.primary-btn {
+  margin-top: 25px;
+  padding: 15px 23px;
+  background: #ff3045;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.section {
+  padding: 30px 20px;
+}
+
+.section-title {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.race-card {
+  background: #151c29;
+  border: 1px solid #30394b;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.race-card .small {
+  color: #ff4655;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.race-card h3 {
+  font-size: 21px;
+  margin: 13px 0;
+}
+
+.race-card p {
+  color: #9ca7b8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.feature {
+  background: #151c29;
+  border: 1px solid #30394b;
+  border-radius: 10px;
+  padding: 19px;
+  margin-bottom: 13px;
+}
+
+.feature h3 {
+  font-size: 17px;
+  margin-bottom: 9px;
+}
+
+.feature p {
+  color: #a4afbf;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.feature .emoji {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+footer {
+  padding: 30px 15px;
+  text-align: center;
+  border-top: 1px solid #252b37;
+  color: #8792a3;
+  font-size: 12px;
+}
+
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  background: #111722;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 5px;
+  border-top: 1px solid #30394b;
+}
+
+.bottom-nav a {
+  color: #cbd2df;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.bottom-nav a:hover {
+  color: #ff4655;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <div class="logo">Racel<span>Q</span></div>
+    <div style="font-size:9px;color:#9ca7b8;letter-spacing:2px;">
+      KEEP PUSHING THE LIMITS
+    </div>
+  </div>
+  <div class="menu">🏁</div>
+</header>
+
+<section class="hero">
+  <div class="tag">WELCOME TO RACELQ</div>
+
+  <h1>
+    FEEL THE<br>
+    <span>RACE.</span><br>
+    OWN THE<br>
+    STRATEGY.
+  </h1>
+
+  <p>
+    Discover Formula 1 analytics, driver performance,
+    race strategies and fan predictions.
+    Experience motorsport from a new perspective.
+  </p>
+
+  <button class="primary-btn"
+  onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+    EXPLORE RACELQ →
+  </button>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Race Headquarters</h2>
+
+  <div class="race-card">
+    <div class="small">RACELQ RACE HUB</div>
+    <h3>Welcome, Motorsport Fans!</h3>
+    <p>
+      Your destination for race intelligence,
+      driver comparisons and strategic thinking.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <h2 class="section-title">Explore RacelQ</h2>
+
+  <div class="feature">
+    <div class="emoji">🏎️</div>
+    <h3>Live Race Timing</h3>
+    <p>Explore driver positions, lap times, sectors and pit stops.</p>
+  </div>
+
+  <div class="feature">
+    <div class="emoji">📊</div>
+    <h3>Driver Analytics</h3>
+    <p>Compare driver performance and explore racing statistics.</p>
+  </div>
+
+  <div class="feature">
+    <div class="emoji">🛞</div>
+    <h3>Strategy Builder</h3>
+    <p>Create your own virtual driver strategy and compare it with the team's plan.</p>
+  </div>
+
+  <div class="feature">
+    <div class="emoji">🏆</div>
+    <h3>Fan Predictions</h3>
+    <p>Predict race outcomes, earn points and compete on leaderboards.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Racel<span>Q</span></div>
+  <p style="margin-top:10px;">Keep Pushing the Limits.</p>
+  <p style="margin-top:12px;">© 2026 RacelQ</p>
+</footer>
+
+<nav class="bottom-nav">
+  <a href="#">Home</a>
+  <a href="#features">Explore</a>
+  <a href="#features">Strategy</a>
+  <a href="#features">Profile</a>
+</nav>
+
+</body>
+</html>
+
