@@ -3,264 +3,238 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080b12">
-<title>RacelQ - Keep Pushing the Limits</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090b10">
+<title>RacelQ | Motorsport Intelligence</title>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --bg:#090b10;
+  --panel:#141923;
+  --line:#292f3b;
+  --red:#ff3448;
+  --muted:#9ba5b5;
+  --white:#f5f6f8;
 }
-
-body {
-  background: #080b12;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--white);
+  font-family:Arial,sans-serif;
 }
-
-header {
-  height: 75px;
-  padding: 0 22px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #252b37;
+header{
+  height:72px;padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;background:#090b10ee;z-index:10;
 }
-
-.logo {
-  font-size: 27px;
-  font-weight: 900;
-  letter-spacing: -1px;
+.logo{font-size:26px;font-weight:900;letter-spacing:-1px}
+.logo span{color:var(--red)}
+.tagline{font-size:9px;color:var(--muted);letter-spacing:2px;margin-top:4px}
+.menu-btn{
+  background:var(--panel);border:1px solid var(--line);
+  color:white;padding:10px 13px;border-radius:7px;font-size:18px;
 }
-
-.logo span {
-  color: #ff3045;
+nav{
+  display:none;position:absolute;top:72px;left:0;width:100%;
+  background:#111722;padding:20px 5%;
+  border-bottom:1px solid var(--line);
 }
-
-.menu {
-  color: #ff3045;
-  font-size: 25px;
+nav.open{display:grid;gap:20px}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:var(--red)}
+main{max-width:1150px;margin:auto;padding:0 18px}
+.hero{
+  padding:55px 25px 45px;margin-top:22px;
+  border:1px solid var(--line);border-radius:14px;
+  background:radial-gradient(ellipse at 90% 20%,#4a1821 0%,#17121a 35%,#111722 75%);
 }
-
-.hero {
-  padding: 65px 22px 55px;
-  background: linear-gradient(135deg, #171d2a, #080b12);
+.eyebrow{color:var(--red);font-weight:bold;font-size:11px;letter-spacing:2px}
+h1{font-size:clamp(38px,8vw,68px);line-height:1.04;margin:20px 0}
+h1 span{color:var(--red)}
+.hero p{color:#b1bac8;max-width:540px;line-height:1.7;font-size:14px}
+.btn{
+  display:inline-block;background:var(--red);color:white;
+  border:0;border-radius:6px;padding:14px 19px;
+  font-weight:bold;text-decoration:none;margin-top:16px;
 }
-
-.tag {
-  color: #ff4655;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 2px;
+.section{padding:35px 0}
+.section-heading{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:12px;margin-bottom:17px;
 }
-
-.hero h1 {
-  font-size: 43px;
-  line-height: 1.12;
-  margin: 20px 0;
+h2{font-size:21px;margin:0}
+.muted{color:var(--muted);font-size:12px}
+.grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:13px;
 }
-
-.hero h1 span {
-  color: #ff3045;
+.card{
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:11px;padding:18px;min-width:0;
 }
-
-.hero p {
-  color: #aab3c2;
-  line-height: 1.7;
-  font-size: 15px;
-  max-width: 420px;
+.card h3{font-size:15px;margin:11px 0}
+.card p{font-size:12px;color:var(--muted);line-height:1.6}
+.icon{font-size:25px}
+.stat{font-size:25px;font-weight:bold;margin:10px 0}
+.red{color:var(--red)}
+.green{color:#3dd69a}
+.race{
+  background:linear-gradient(110deg,#211820,#141923);
+  border:1px solid #50303a;border-radius:11px;padding:22px;
 }
-
-.primary-btn {
-  margin-top: 25px;
-  padding: 15px 23px;
-  background: #ff3045;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 14px;
+.race h3{font-size:23px;margin:10px 0}
+.pill{
+  display:inline-block;background:#26332f;color:#50dfa6;
+  padding:6px 9px;border-radius:20px;font-size:10px;font-weight:bold;
 }
-
-.section {
-  padding: 30px 20px;
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{text-align:left;padding:13px 9px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:normal}
+td:first-child{color:var(--red);font-weight:bold}
+.table-wrap{overflow-x:auto}
+.feature{scroll-margin-top:90px}
+footer{
+  text-align:center;padding:35px 15px;
+  border-top:1px solid var(--line);color:var(--muted);font-size:12px;
 }
-
-.section-title {
-  font-size: 22px;
-  margin-bottom: 18px;
+@media(min-width:750px){
+  .menu-btn{display:none}
+  nav{display:flex;position:static;width:auto;padding:0;border:0;
+      background:transparent;gap:25px}
+  .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .hero{padding:75px 55px}
 }
-
-.race-card {
-  background: #151c29;
-  border: 1px solid #30394b;
-  border-radius: 12px;
-  padding: 22px;
-}
-
-.race-card .small {
-  color: #ff4655;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.race-card h3 {
-  font-size: 21px;
-  margin: 13px 0;
-}
-
-.race-card p {
-  color: #9ca7b8;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.feature {
-  background: #151c29;
-  border: 1px solid #30394b;
-  border-radius: 10px;
-  padding: 19px;
-  margin-bottom: 13px;
-}
-
-.feature h3 {
-  font-size: 17px;
-  margin-bottom: 9px;
-}
-
-.feature p {
-  color: #a4afbf;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.feature .emoji {
-  font-size: 25px;
-  margin-bottom: 12px;
-}
-
-footer {
-  padding: 30px 15px;
-  text-align: center;
-  border-top: 1px solid #252b37;
-  color: #8792a3;
-  font-size: 12px;
-}
-
-.bottom-nav {
-  position: sticky;
-  bottom: 0;
-  background: #111722;
-  display: flex;
-  justify-content: space-around;
-  padding: 16px 5px;
-  border-top: 1px solid #30394b;
-}
-
-.bottom-nav a {
-  color: #cbd2df;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.bottom-nav a:hover {
-  color: #ff4655;
-}
-
 </style>
 </head>
-
 <body>
 
 <header>
   <div>
     <div class="logo">Racel<span>Q</span></div>
-    <div style="font-size:9px;color:#9ca7b8;letter-spacing:2px;">
-      KEEP PUSHING THE LIMITS
-    </div>
+    <div class="tagline">KEEP PUSHING THE LIMITS</div>
   </div>
-  <div class="menu">🏁</div>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+  <nav id="navigation">
+    <a href="#">Home</a>
+    <a href="#race">Race Hub</a>
+    <a href="#timing">Timing</a>
+    <a href="#strategy">Strategy Lab</a>
+    <a href="#predictions">Predictions</a>
+  </nav>
 </header>
 
+<main>
 <section class="hero">
-  <div class="tag">WELCOME TO RACELQ</div>
-
-  <h1>
-    FEEL THE<br>
-    <span>RACE.</span><br>
-    OWN THE<br>
-    STRATEGY.
-  </h1>
-
+  <div class="eyebrow">MOTORSPORT INTELLIGENCE PLATFORM</div>
+  <h1>BEYOND THE<br><span>FINISH LINE.</span></h1>
   <p>
-    Discover Formula 1 analytics, driver performance,
-    race strategies and fan predictions.
-    Experience motorsport from a new perspective.
+    Analyse every racing moment. Explore driver performance,
+    understand race strategy and challenge yourself with
+    Formula 1 predictions.
   </p>
+  <a class="btn" href="#race">EXPLORE RACE HUB →</a>
+</section>
 
-  <button class="primary-btn"
-  onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
-    EXPLORE RACELQ →
-  </button>
+<section class="section" id="race">
+  <div class="section-heading">
+    <h2>Race Headquarters</h2>
+    <span class="muted">2026 SEASON</span>
+  </div>
+  <div class="race">
+    <span class="pill">RACELQ RACE CENTRE</span>
+    <h3>Your Race. Your Intelligence.</h3>
+    <p class="muted">Explore race information, circuits, timing and strategy insights.</p>
+    <a class="btn" href="#timing">OPEN RACE CENTRE →</a>
+  </div>
 </section>
 
 <section class="section">
-  <h2 class="section-title">Race Headquarters</h2>
-
-  <div class="race-card">
-    <div class="small">RACELQ RACE HUB</div>
-    <h3>Welcome, Motorsport Fans!</h3>
-    <p>
-      Your destination for race intelligence,
-      driver comparisons and strategic thinking.
-    </p>
+  <div class="section-heading">
+    <h2>Explore Analytics</h2>
+    <span class="muted">RACELQ FEATURES</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">🏎️</div>
+      <h3>Driver Analytics</h3>
+      <p>Explore driver performance and comparisons.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🏆</div>
+      <h3>Team Intelligence</h3>
+      <p>Explore constructor performance and team data.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🛞</div>
+      <h3>Tyre Analysis</h3>
+      <p>Understand tyre compounds and degradation.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🌦️</div>
+      <h3>Race Conditions</h3>
+      <p>Explore weather and track-condition scenarios.</p>
+    </div>
   </div>
 </section>
 
-<section class="section" id="features">
-  <h2 class="section-title">Explore RacelQ</h2>
-
-  <div class="feature">
-    <div class="emoji">🏎️</div>
-    <h3>Live Race Timing</h3>
-    <p>Explore driver positions, lap times, sectors and pit stops.</p>
+<section class="section feature" id="timing">
+  <div class="section-heading">
+    <h2>Race Timing</h2>
+    <span class="muted">DEMO DATA</span>
   </div>
-
-  <div class="feature">
-    <div class="emoji">📊</div>
-    <h3>Driver Analytics</h3>
-    <p>Compare driver performance and explore racing statistics.</p>
-  </div>
-
-  <div class="feature">
-    <div class="emoji">🛞</div>
-    <h3>Strategy Builder</h3>
-    <p>Create your own virtual driver strategy and compare it with the team's plan.</p>
-  </div>
-
-  <div class="feature">
-    <div class="emoji">🏆</div>
-    <h3>Fan Predictions</h3>
-    <p>Predict race outcomes, earn points and compete on leaderboards.</p>
+  <div class="card">
+    <p>Illustrative timing preview — not connected to a live race feed.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>POS</th><th>DRIVER</th><th>TEAM</th><th>STATUS</th></tr></thead>
+        <tbody>
+          <tr><td>01</td><td>Driver 1</td><td>Team A</td><td>Demo</td></tr>
+          <tr><td>02</td><td>Driver 2</td><td>Team B</td><td>Demo</td></tr>
+          <tr><td>03</td><td>Driver 3</td><td>Team C</td><td>Demo</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
+
+<section class="section feature" id="strategy">
+  <div class="section-heading"><h2>Strategy Lab</h2></div>
+  <div class="card">
+    <div class="icon">🛞</div>
+    <h3>Team vs Fan Strategy</h3>
+    <p>Build an alternative virtual tyre strategy and compare its simulated performance against a team's plan.</p>
+    <span class="muted">Strategy simulator coming soon</span>
+  </div>
+</section>
+
+<section class="section feature" id="predictions">
+  <div class="section-heading"><h2>Fan Predictions</h2></div>
+  <div class="card">
+    <div class="icon">🏁</div>
+    <h3>Make Your Race Predictions</h3>
+    <p>Predict race outcomes, earn points and compete with fans.</p>
+    <span class="muted">Prediction portal coming soon</span>
+  </div>
+</section>
+
+</main>
 
 <footer>
   <div class="logo">Racel<span>Q</span></div>
-  <p style="margin-top:10px;">Keep Pushing the Limits.</p>
-  <p style="margin-top:12px;">© 2026 RacelQ</p>
+  <p style="margin:12px 0">KEEP PUSHING THE LIMITS</p>
+  <p>© 2026 RacelQ. Independent fan analytics prototype.</p>
 </footer>
 
-<nav class="bottom-nav">
-  <a href="#">Home</a>
-  <a href="#features">Explore</a>
-  <a href="#features">Strategy</a>
-  <a href="#features">Profile</a>
-</nav>
+<script>
+function toggleMenu(){
+  document.getElementById("navigation").classList.toggle("open");
+}
+document.querySelectorAll("nav a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    document.getElementById("navigation").classList.remove("open");
+  });
+});
+</script>
 
 </body>
 </html>
-
