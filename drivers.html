@@ -108,24 +108,44 @@ footer{text-align:center;border-top:1px solid var(--line);padding:25px;color:var
 <footer>RACELQ © 2026 · KEEP PUSHING THE LIMITS</footer>
 
 <script>
-const drivers=[
- {name:"Max Verstappen",team:"Red Bull Racing",number:3,nation:"Netherlands",wins:65,podiums:112,poles:44,points:250},
- {name:"Lewis Hamilton",team:"Ferrari",number:44,nation:"United Kingdom",wins:105,podiums:202,poles:104,points:180},
- {name:"Charles Leclerc",team:"Ferrari",number:16,nation:"Monaco",wins:8,podiums:43,poles:27,points:160},
- {name:"Lando Norris",team:"McLaren",number:4,nation:"United Kingdom",wins:11,podiums:30,poles:11,points:220},
- {name:"Oscar Piastri",team:"McLaren",number:81,nation:"Australia",wins:6,podiums:20,poles:6,points:190},
- {name:"George Russell",team:"Mercedes",number:63,nation:"United Kingdom",wins:5,podiums:18,poles:6,points:150},
- {name:"Fernando Alonso",team:"Aston Martin",number:14,nation:"Spain",wins:32,podiums:106,poles:22,points:45},
- {name:"Carlos Sainz",team:"Williams",number:55,nation:"Spain",wins:4,podiums:27,poles:6,points:70}
+const drivers = [
+{name:"Lando Norris",team:"McLaren",number:1,nation:"United Kingdom",wins:0,podiums:0,poles:0,points:0},
+{name:"Oscar Piastri",team:"McLaren",number:81,nation:"Australia",wins:0,podiums:0,poles:0,points:0},
+{name:"George Russell",team:"Mercedes",number:63,nation:"United Kingdom",wins:0,podiums:0,poles:0,points:0},
+{name:"Kimi Antonelli",team:"Mercedes",number:12,nation:"Italy",wins:0,podiums:0,poles:0,points:0},
+{name:"Charles Leclerc",team:"Ferrari",number:16,nation:"Monaco",wins:0,podiums:0,poles:0,points:0},
+{name:"Lewis Hamilton",team:"Ferrari",number:44,nation:"United Kingdom",wins:0,podiums:0,poles:0,points:0},
+{name:"Max Verstappen",team:"Red Bull Racing",number:3,nation:"Netherlands",wins:0,podiums:0,poles:0,points:0},
+{name:"Isack Hadjar",team:"Red Bull Racing",number:6,nation:"France",wins:0,podiums:0,poles:0,points:0},
+{name:"Carlos Sainz",team:"Williams",number:55,nation:"Spain",wins:0,podiums:0,poles:0,points:0},
+{name:"Alexander Albon",team:"Williams",number:23,nation:"Thailand",wins:0,podiums:0,poles:0,points:0},
+{name:"Liam Lawson",team:"Racing Bulls",number:30,nation:"New Zealand",wins:0,podiums:0,poles:0,points:0},
+{name:"Arvid Lindblad",team:"Racing Bulls",number:41,nation:"United Kingdom",wins:0,podiums:0,poles:0,points:0},
+{name:"Fernando Alonso",team:"Aston Martin",number:14,nation:"Spain",wins:0,podiums:0,poles:0,points:0},
+{name:"Lance Stroll",team:"Aston Martin",number:18,nation:"Canada",wins:0,podiums:0,poles:0,points:0},
+{name:"Esteban Ocon",team:"Haas",number:31,nation:"France",wins:0,podiums:0,poles:0,points:0},
+{name:"Oliver Bearman",team:"Haas",number:87,nation:"United Kingdom",wins:0,podiums:0,poles:0,points:0},
+{name:"Nico Hulkenberg",team:"Audi",number:27,nation:"Germany",wins:0,podiums:0,poles:0,points:0},
+{name:"Gabriel Bortoleto",team:"Audi",number:5,nation:"Brazil",wins:0,podiums:0,poles:0,points:0},
+{name:"Pierre Gasly",team:"Alpine",number:10,nation:"France",wins:0,podiums:0,poles:0,points:0},
+{name:"Franco Colapinto",team:"Alpine",number:43,nation:"Argentina",wins:0,podiums:0,poles:0,points:0},
+{name:"Sergio Perez",team:"Cadillac",number:11,nation:"Mexico",wins:0,podiums:0,poles:0,points:0},
+{name:"Valtteri Bottas",team:"Cadillac",number:77,nation:"Finland",wins:0,podiums:0,poles:0,points:0}
 ];
-const teams=[
- {name:"McLaren",drivers:"Lando Norris · Oscar Piastri",points:410,wins:17,poles:17},
- {name:"Ferrari",drivers:"Lewis Hamilton · Charles Leclerc",points:340,wins:13,poles:8},
- {name:"Red Bull Racing",drivers:"Max Verstappen · Team driver",points:300,wins:8,poles:8},
- {name:"Mercedes",drivers:"George Russell · Team driver",points:230,wins:4,poles:3},
- {name:"Aston Martin",drivers:"Fernando Alonso · Team driver",points:90,wins:0,poles:0},
- {name:"Williams",drivers:"Carlos Sainz · Team driver",points:80,wins:0,poles:0}
+const teams = [
+{name:"McLaren",drivers:"Lando Norris · Oscar Piastri",points:0,wins:0,poles:0},
+{name:"Mercedes",drivers:"George Russell · Kimi Antonelli",points:0,wins:0,poles:0},
+{name:"Ferrari",drivers:"Charles Leclerc · Lewis Hamilton",points:0,wins:0,poles:0},
+{name:"Red Bull Racing",drivers:"Max Verstappen · Isack Hadjar",points:0,wins:0,poles:0},
+{name:"Williams",drivers:"Carlos Sainz · Alexander Albon",points:0,wins:0,poles:0},
+{name:"Racing Bulls",drivers:"Liam Lawson · Arvid Lindblad",points:0,wins:0,poles:0},
+{name:"Aston Martin",drivers:"Fernando Alonso · Lance Stroll",points:0,wins:0,poles:0},
+{name:"Haas",drivers:"Esteban Ocon · Oliver Bearman",points:0,wins:0,poles:0},
+{name:"Audi",drivers:"Nico Hulkenberg · Gabriel Bortoleto",points:0,wins:0,poles:0},
+{name:"Alpine",drivers:"Pierre Gasly · Franco Colapinto",points:0,wins:0,poles:0},
+{name:"Cadillac",drivers:"Sergio Perez · Valtteri Bottas",points:0,wins:0,poles:0}
 ];
+
 const photos={
  "Max Verstappen":"https://media.formula1.com/image/upload/f_auto,c_limit,w_600,q_auto/content/dam/fom-website/drivers/2025Drivers/verstappen",
  "Lewis Hamilton":"https://media.formula1.com/image/upload/f_auto,c_limit,w_600,q_auto/content/dam/fom-website/drivers/2025Drivers/hamilton",
