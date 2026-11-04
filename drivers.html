@@ -103,6 +103,77 @@ footer{text-align:center;border-top:1px solid var(--line);padding:25px;color:var
  <div class="grid" id="teamGrid"></div>
  <div class="panel detail" id="teamDetail"></div>
 </section>
+ 
+<section class="section" id="racecontrol">
+ <div class="section-head">
+  <div>
+   <div class="tag">04 / LIVE RACE CENTRE</div>
+   <h2>RACE CONTROL</h2>
+   <div class="sub">Your Formula 1 race command centre</div>
+  </div>
+  <span class="tag">DATA PREVIEW</span>
+ </div>
+
+ <div class="grid">
+  <div class="panel">
+   <div class="tag">RACE STATUS</div>
+   <h2 id="raceStatus">WAITING FOR DATA</h2>
+   <p class="sub">Session and track status</p>
+  </div>
+  <div class="panel">
+   <div class="tag">WEATHER</div>
+   <h2 id="weatherStatus">--</h2>
+   <p class="sub">Track and air conditions</p>
+  </div>
+  <div class="panel">
+   <div class="tag">SAFETY CAR</div>
+   <h2 id="safetyStatus">UNKNOWN</h2>
+   <p class="sub">Race control information</p>
+  </div>
+ </div>
+
+ <div class="section" id="timing">
+  <h2>LIVE TIMING</h2>
+  <div class="panel" style="margin-top:15px;overflow-x:auto">
+   <p class="sub">Live positions and lap times will appear here when a live data feed is connected.</p>
+   <table style="width:100%;text-align:left;border-collapse:collapse;font-size:13px">
+    <thead><tr><th>POS</th><th>DRIVER</th><th>TEAM</th><th>GAP</th></tr></thead>
+    <tbody id="timingTable">
+     <tr><td colspan="4" style="padding:18px;color:#9297a5">Waiting for race data...</td></tr>
+    </tbody>
+   </table>
+  </div>
+ </div>
+
+ <div class="grid">
+  <div class="panel">
+   <div class="tag">TYRE INTELLIGENCE</div>
+   <h2>Tyre Strategy</h2>
+   <p class="sub">Compound, tyre age and stint analysis.</p>
+   <div id="tyreInfo" style="margin-top:15px">Awaiting session data</div>
+  </div>
+  <div class="panel">
+   <div class="tag">PIT STOP TRACKER</div>
+   <h2>Pit Stop History</h2>
+   <p class="sub">Stop laps and pit lane duration.</p>
+   <div id="pitInfo" style="margin-top:15px">Awaiting session data</div>
+  </div>
+  <div class="panel">
+   <div class="tag">RACE CONDITIONS</div>
+   <h2>Weather Centre</h2>
+   <p class="sub">Rain, wind and track temperature.</p>
+   <div id="weatherInfo" style="margin-top:15px">Awaiting weather data</div>
+  </div>
+  <div class="panel">
+   <div class="tag">STRATEGY LAB</div>
+   <h2>Team vs Fan</h2>
+   <p class="sub">Compare actual team strategy with your virtual alternative.</p>
+   <a href="index.html" style="color:#ed1735">Explore RacelQ Strategy Lab →</a>
+  </div>
+ </div>
+ <p class="notice">LIVE DATA NOT CONNECTED YET. This is the dashboard layout; no live positions or race conditions are being reported yet.</p>
+</section>
+
 <p class="notice">DEMO VERSION: All driver and team statistics below are illustrative sample values, not verified official F1 records. Driver portraits are loaded from external image sources and may not always display.</p>
 </main>
 <footer>RACELQ © 2026 · KEEP PUSHING THE LIMITS</footer>
